@@ -9,13 +9,15 @@ import {
   refreshToken,
   logout,
 } from '../controllers/auth.controller.js';
-import { verifyJWT } from '../middlewares/verifyJWT.js';
-import { validateRequest } from '../middlewares/validateRequest.js';
+import {
+  validateRequest
+} from "../middlewares/validateRequest.middleware.js"
 import {
   registerSchema,
   loginSchema,
   changePasswordSchema,
 } from '../validators/user.validators.js';
+import { verifyJWT } from '../middlewares/auth.middleware.js';
 
 const router = express.Router();
 
